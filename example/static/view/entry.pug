@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+    link(rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/29563510?s=40&v=4")
+    title #{title || 'hot-update'}
+    if entryCss
+      link(rel="stylesheet" href=entryCss)
+    
+  body
+    div#react-root !{reactString}
+
+    if prefetchedData
+      script.
+        window.__DATA__ = !{prefetchedData};
+
+    script.
+      var scripts = ['#{entryJs}'];
+      scripts.forEach(function (src) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.crossOrigin = "anonymous";
+        script.async = false;
+        document.head.appendChild(script);
+      });
+
+

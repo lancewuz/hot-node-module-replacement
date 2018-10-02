@@ -1,0 +1,49 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=local node server/index.js",
+    "babel:dev": "cross-env BABEL_ENV=server babel ./client -d ./tmpDist/client --quiet",
+    "build:dev": "npm run babel:dev && cross-env NODE_ENV=development webpack --config config/webpack.config.dev.js",
+    "start:dev": "cross-env NODE_ENV=development node server/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4",
+    "pug": "^2.0.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.9.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-ignore-html-and-css-imports": "0.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-hot-loader": "^1.4.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "hot-node-module-replacement": "^1.0.0",
+    "koa-webpack": "^5.1.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "author": "lancewu",
+  "license": "ISC"
+}

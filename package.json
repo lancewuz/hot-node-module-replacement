@@ -1,0 +1,22 @@
+{
+  "name": "hot-node-module-replacement",
+  "version": "1.0.0",
+  "description": "hot replace modules of node.js in server side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lancewuz/hot-node-module-replacement.git"
+  },
+  "keywords": [
+    "HMR"
+  ],
+  "author": "lancewu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lancewuz/hot-node-module-replacement/issues"
+  },
+  "homepage": "https://github.com/lancewuz/hot-node-module-replacement#readme"
+}
